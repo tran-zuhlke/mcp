@@ -1,0 +1,29 @@
+{
+  "2311.09277v1": {
+    "title": "Contrastive Chain-of-Thought Prompting",
+    "authors": [
+      "Yew Ken Chia",
+      "Guizhen Chen",
+      "Luu Anh Tuan",
+      "Soujanya Poria",
+      "Lidong Bing"
+    ],
+    "summary": "Despite the success of chain of thought in enhancing language model\nreasoning, the underlying process remains less well understood. Although\nlogically sound reasoning appears inherently crucial for chain of thought,\nprior studies surprisingly reveal minimal impact when using invalid\ndemonstrations instead. Furthermore, the conventional chain of thought does not\ninform language models on what mistakes to avoid, which potentially leads to\nmore errors. Hence, inspired by how humans can learn from both positive and\nnegative examples, we propose contrastive chain of thought to enhance language\nmodel reasoning. Compared to the conventional chain of thought, our approach\nprovides both valid and invalid reasoning demonstrations, to guide the model to\nreason step-by-step while reducing reasoning mistakes. To improve\ngeneralization, we introduce an automatic method to construct contrastive\ndemonstrations. Our experiments on reasoning benchmarks demonstrate that\ncontrastive chain of thought can serve as a general enhancement of\nchain-of-thought prompting.",
+    "pdf_url": "http://arxiv.org/pdf/2311.09277v1",
+    "published": "2023-11-15"
+  },
+  "2311.01460v1": {
+    "title": "Implicit Chain of Thought Reasoning via Knowledge Distillation",
+    "authors": [
+      "Yuntian Deng",
+      "Kiran Prasad",
+      "Roland Fernandez",
+      "Paul Smolensky",
+      "Vishrav Chaudhary",
+      "Stuart Shieber"
+    ],
+    "summary": "To augment language models with the ability to reason, researchers usually\nprompt or finetune them to produce chain of thought reasoning steps before\nproducing the final answer. However, although people use natural language to\nreason effectively, it may be that LMs could reason more effectively with some\nintermediate computation that is not in natural language. In this work, we\nexplore an alternative reasoning approach: instead of explicitly producing the\nchain of thought reasoning steps, we use the language model's internal hidden\nstates to perform implicit reasoning. The implicit reasoning steps are\ndistilled from a teacher model trained on explicit chain-of-thought reasoning,\nand instead of doing reasoning \"horizontally\" by producing intermediate words\none-by-one, we distill it such that the reasoning happens \"vertically\" among\nthe hidden states in different layers. We conduct experiments on a multi-digit\nmultiplication task and a grade school math problem dataset and find that this\napproach enables solving tasks previously not solvable without explicit\nchain-of-thought, at a speed comparable to no chain-of-thought.",
+    "pdf_url": "http://arxiv.org/pdf/2311.01460v1",
+    "published": "2023-11-02"
+  }
+}

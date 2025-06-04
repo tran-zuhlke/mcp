@@ -1,0 +1,30 @@
+{
+  "1802.03292v1": {
+    "title": "Mathematical Logic in Computer Science",
+    "authors": [
+      "Assaf Kfoury"
+    ],
+    "summary": "The article retraces major events and milestones in the mutual influences\nbetween mathematical logic and computer science since the 1950s.",
+    "pdf_url": "http://arxiv.org/pdf/1802.03292v1",
+    "published": "2018-02-07"
+  },
+  "1501.05039v1": {
+    "title": "Defining Data Science",
+    "authors": [
+      "Yangyong Zhu",
+      "Yun Xiong"
+    ],
+    "summary": "Data science is gaining more and more and widespread attention, but no\nconsensus viewpoint on what data science is has emerged. As a new science, its\nobjects of study and scientific issues should not be covered by established\nsciences. Data in cyberspace have formed what we call datanature. In the\npresent paper, data science is defined as the science of exploring datanature.",
+    "pdf_url": "http://arxiv.org/pdf/1501.05039v1",
+    "published": "2015-01-21"
+  },
+  "2002.05658v1": {
+    "title": "Ten Research Challenge Areas in Data Science",
+    "authors": [
+      "Jeannette M. Wing"
+    ],
+    "summary": "Although data science builds on knowledge from computer science, mathematics,\nstatistics, and other disciplines, data science is a unique field with many\nmysteries to unlock: challenging scientific questions and pressing questions of\nsocietal importance. This article starts with meta-questions about data science\nas a discipline and then elaborates on ten ideas for the basis of a research\nagenda for data science.",
+    "pdf_url": "http://arxiv.org/pdf/2002.05658v1",
+    "published": "2020-01-27"
+  }
+}

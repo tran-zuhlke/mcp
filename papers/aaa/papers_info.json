@@ -1,0 +1,66 @@
+{
+  "2407.05242v3": {
+    "title": "Abdominal aortic aneurysm wall stress: A 7-line code in MATLAB and a one-click software application",
+    "authors": [
+      "Mostafa Jamshidian",
+      "Saeideh Sekhavat",
+      "Adam Wittek",
+      "Donatien Le Liepvre",
+      "Florian Bernard",
+      "Ludovic Minvielle",
+      "Antoine Fondan\u00e8che",
+      "Karol Miller"
+    ],
+    "summary": "An abdominal aortic aneurysm (AAA) is a life-threatening condition\ncharacterized by the irreversible dilation of the lower aorta, usually detected\nincidentally during imaging for other health issues. Current clinical practice\nfor managing AAA relies on a one-size-fits-all approach, based on the\naneurysm's maximum diameter and growth rate, which can lead to underestimation\nor overestimation of AAA rupture risk. Patient-specific AAA wall stress,\ncomputed using biomechanical models derived from medical images without needing\npatient-specific material properties, has been widely investigated for\ndeveloping individualized AAA rupture risk predictors. Therefore, AAA wall\nstress, determined reliably and quickly, has the potential to enhance\npatient-specific treatment plans. This paper presents a 7-line code, written in\nMATLAB using the Partial Differential Equation Toolbox, for AAA wall stress\ncomputations via finite element analysis. The code takes AAA wall geometry as\ninput and outputs stress components over the AAA wall domain. Additionally, we\npresent a one-click standalone software application for AAA wall stress\ncomputation, developed based on our 7-line code using MATLAB Compiler. After\nverification, we used our code to compute AAA wall stress in ten patients. Our\nanalysis indicated that the 99th percentile of maximum principal stress across\nall patients ranged from 0.307 MPa to 0.466 MPa, with an average of 0.380 MPa\nand a standard deviation of 0.048 MPa. Moreover, for every case, the MATLAB\nsimulation time was less than a minute on a laptop workstation.",
+    "pdf_url": "http://arxiv.org/pdf/2407.05242v3",
+    "published": "2024-07-07"
+  },
+  "2303.01069v1": {
+    "title": "Implicit Neural Representations for Modeling of Abdominal Aortic Aneurysm Progression",
+    "authors": [
+      "Dieuwertje Alblas",
+      "Marieke Hofman",
+      "Christoph Brune",
+      "Kak Khee Yeung",
+      "Jelmer M. Wolterink"
+    ],
+    "summary": "Abdominal aortic aneurysms (AAAs) are progressive dilatations of the\nabdominal aorta that, if left untreated, can rupture with lethal consequences.\nImaging-based patient monitoring is required to select patients eligible for\nsurgical repair. In this work, we present a model based on implicit neural\nrepresentations (INRs) to model AAA progression. We represent the AAA wall over\ntime as the zero-level set of a signed distance function (SDF), estimated by a\nmultilayer perception that operates on space and time. We optimize this INR\nusing automatically extracted segmentation masks in longitudinal CT data. This\nnetwork is conditioned on spatiotemporal coordinates and represents the AAA\nsurface at any desired resolution at any moment in time. Using regularization\non spatial and temporal gradients of the SDF, we ensure proper interpolation of\nthe AAA shape. We demonstrate the network's ability to produce AAA\ninterpolations with average surface distances ranging between 0.72 and 2.52 mm\nfrom images acquired at highly irregular intervals. The results indicate that\nour model can accurately interpolate AAA shapes over time, with potential\nclinical value for a more personalised assessment of AAA progression.",
+    "pdf_url": "http://arxiv.org/pdf/2303.01069v1",
+    "published": "2023-03-02"
+  },
+  "2407.08138v2": {
+    "title": "How Do Developers Structure Unit Test Cases? An Empirical Study from the \"AAA\" Perspective",
+    "authors": [
+      "Chenhao Wei",
+      "Lu Xiao",
+      "Tingting Yu",
+      "Sunny Wong",
+      "Abigail Clune"
+    ],
+    "summary": "The AAA pattern, i.e. arrange, act, and assert, provides a unified structure\nfor unit test cases, which benefits comprehension and maintenance. However,\nthere is little understanding regarding whether and how common real-life\ndevelopers structure unit test cases following AAA in practice. In particular,\nare there recurring anti-patterns that deviate from the AAA structure and merit\nrefactoring? And, if test cases follow the AAA structure, could they contain\ndesign flaws in the A blocks? If we propose refactoring to fix the design of\ntest cases following the AAA, how do developers receive the proposals? Do they\nfavor refactoring? If not, what are their considerations? This study presents\nan empirical study on 435 real-life unit test cases randomly selected from four\nopen-source projects. Overall, the majority (71.5%) of test cases follow the\nAAA structure. And, we observed three recurring anti-patterns that deviate from\nthe AAA structure, as well as four design flaws that may reside inside of the A\nblocks. Each issue type has its drawbacks and merits corresponding refactoring\nresolutions. We sent a total of 18 refactoring proposals as issue tickets for\nfixing these problems. We received 78% positive feedback favoring the\nrefactoring. From the rejections, we learned that return-on-investment is a key\nconsideration for developers. The findings provide insights for practitioners\nto structure unit test cases with AAA in mind, and for researchers to develop\nrelated techniques for enforcing AAA in test cases.",
+    "pdf_url": "http://arxiv.org/pdf/2407.08138v2",
+    "published": "2024-07-11"
+  },
+  "cond-mat/0604296v1": {
+    "title": "Dependence of self-assembled amphiphile structure on interaction between hydrophilic groups",
+    "authors": [
+      "Hiroaki Nakamura",
+      "Yuichi Tamura"
+    ],
+    "summary": "In a previous study (Comp. Phys. Com.(2005) Vol.169, 139-143), we clarified\nthe dependence of the phase structure on the hydrophilicity of an amphiphilic\nmolecule by varying the interaction potential between the hydrophilic molecule\nand water(aAA) in a dissipative particle dynamics (DPD) simulation using the\nJury model. In the present paper, we perform another DPD simulation using the\nprevious model to investigate the dependence of the interaction potential\nbetween adjacent hydrophilic groups on the phase structure. By varying the\ncoefficient of the interaction potential between adjacent hydrophilic groups\naAA (aAA=15,25,40, and 250) at a dimensionless temperature of T=0.5 and a\nconcentration of amphiphilic molecules in water of phi=50%, hexagonal\n(aAA=14,25,40) and micellar (aAA=250) phases were observed. In comparison with\nthe previous results, the dependence of the A-B dimer's shape on aAA was\ndetermined to be weaker than that on aAA. Therefore, it is concluded that the\nsolvent water W plays an important role in aggregation of the A-B dimers.",
+    "pdf_url": "http://arxiv.org/pdf/cond-mat/0604296v1",
+    "published": "2006-04-12"
+  },
+  "2405.13377v3": {
+    "title": "Kinematics of Abdominal Aortic Aneurysms",
+    "authors": [
+      "Mostafa Jamshidian",
+      "Adam Wittek",
+      "Saeideh Sekhavat",
+      "Karol Miller"
+    ],
+    "summary": "A search in Scopus within \"Article title, Abstract, Keywords\" unveils 2,444\ndocuments focused on the biomechanics of Abdominal Aortic Aneurysm (AAA),\nmostly on AAA wall stress. Only 24 documents investigated AAA kinematics, an\nimportant topic that could potentially offer significant insights into the\nbiomechanics of AAA. In this paper, we present an image-based approach for\npatient-specific, in vivo, and non-invasive AAA kinematic analysis using\npatient's time-resolved 3D computed tomography angiography (4D-CTA) images,\nwith an objective to measure wall displacement and strain during the cardiac\ncycle. Our approach relies on regularized deformable image registration for\nestimating wall displacement, estimation of the local wall strain as the ratio\nof its normal displacement to its local radius of curvature, and local surface\nfitting with non-deterministic outlier detection for estimating the wall radius\nof curvature. We verified our approach against synthetic ground truth image\ndata created by warping a 3D-CTA image of AAA using a realistic displacement\nfield obtained from a finite element biomechanical model. We applied our\napproach to assess AAA wall displacements and strains in ten patients. Our\nkinematic analysis results indicated that the 99th percentile of\ncircumferential wall strain, among all patients, ranged from 2.62% to 5.54%,\nwith an average of 4.45% and a standard deviation of 0.87%. We also observed\nthat AAA wall strains are significantly lower than those of a healthy aorta.\nOur work demonstrates that the registration-based measurement of AAA wall\ndisplacements in the direction normal to the wall is sufficiently accurate to\nreliably estimate strain from these displacements.",
+    "pdf_url": "http://arxiv.org/pdf/2405.13377v3",
+    "published": "2024-05-22"
+  }
+}

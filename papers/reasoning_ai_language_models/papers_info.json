@@ -1,0 +1,22 @@
+{
+  "2405.06643v2": {
+    "title": "Levels of AI Agents: from Rules to Large Language Models",
+    "authors": [
+      "Yu Huang"
+    ],
+    "summary": "AI agents are defined as artificial entities to perceive the environment,\nmake decisions and take actions. Inspired by the 6 levels of autonomous driving\nby Society of Automotive Engineers, the AI agents are also categorized based on\nutilities and strongness, as the following levels: L0, no AI, with tools taking\ninto account perception plus actions; L1, using rule-based AI; L2, making\nrule-based AI replaced by IL/RL-based AI, with additional reasoning & decision\nmaking; L3, applying LLM-based AI instead of IL/RL-based AI, additionally\nsetting up memory & reflection; L4, based on L3, facilitating autonomous\nlearning & generalization; L5, based on L4, appending personality of emotion\nand character and collaborative behavior with multi-agents.",
+    "pdf_url": "http://arxiv.org/pdf/2405.06643v2",
+    "published": "2024-03-06"
+  },
+  "2505.20313v1": {
+    "title": "Reasoning in Neurosymbolic AI",
+    "authors": [
+      "Son Tran",
+      "Edjard Mota",
+      "Artur d'Avila Garcez"
+    ],
+    "summary": "Knowledge representation and reasoning in neural networks have been a\nlong-standing endeavor which has attracted much attention recently. The\nprincipled integration of reasoning and learning in neural networks is a main\nobjective of the area of neurosymbolic Artificial Intelligence (AI). In this\nchapter, a simple energy-based neurosymbolic AI system is described that can\nrepresent and reason formally about any propositional logic formula. This\ncreates a powerful combination of learning from data and knowledge and logical\nreasoning. We start by positioning neurosymbolic AI in the context of the\ncurrent AI landscape that is unsurprisingly dominated by Large Language Models\n(LLMs). We identify important challenges of data efficiency, fairness and\nsafety of LLMs that might be addressed by neurosymbolic reasoning systems with\nformal reasoning capabilities. We then discuss the representation of logic by\nthe specific energy-based system, including illustrative examples and empirical\nevaluation of the correspondence between logical reasoning and energy\nminimization using Restricted Boltzmann Machines (RBM). Learning from data and\nknowledge is also evaluated empirically and compared with a symbolic, neural\nand a neurosymbolic system. Results reported in this chapter in an accessible\nway are expected to reignite the research on the use of neural networks as\nmassively-parallel models for logical reasoning and promote the principled\nintegration of reasoning and learning in deep networks. We conclude the chapter\nwith a discussion of the importance of positioning neurosymbolic AI within a\nbroader framework of formal reasoning and accountability in AI, discussing the\nchallenges for neurosynbolic AI to tackle the various known problems of\nreliability of deep learning.",
+    "pdf_url": "http://arxiv.org/pdf/2505.20313v1",
+    "published": "2025-05-22"
+  }
+}

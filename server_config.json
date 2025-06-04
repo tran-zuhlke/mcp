@@ -1,0 +1,28 @@
+{
+    "mcpServers": {
+        "fetch": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-fetch"
+            ]
+        },
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/Users/trdo/Desktop",
+                "/Users/trdo/Downloads",
+                "/Users/trdo/Documents",
+                "/Users/trdo/Projects/MCP"
+            ]
+        },
+        "research": {
+            "command": "uv",
+            "args": [
+                "run",
+                "research_server.py"
+            ]
+        }
+    }
+}

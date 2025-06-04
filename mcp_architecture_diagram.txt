@@ -1,0 +1,97 @@
+```
+                        MODEL CONTEXT PROTOCOL (MCP) ARCHITECTURE
+                        =======================================
+
++---------------------+                                  +---------------------+
+|                     |                                  |                     |
+|       HOST          |                                  |       SERVER        |
+| (LLM Application)   |                                  | (Context Provider)  |
+|                     |                                  |                     |
++----------+----------+                                  +----------+----------+
+           |                                                        |
+           |              +-------------------------+               |
+           |              |                         |               |
+           +------------->|        CLIENT           |<--------------+
+                          | (Connection Manager)    |
+                          |                         |
+                          +------------+------------+
+                                       |
+                                       |
+                                       v
+                          +-------------------------+
+                          |                         |
+                          |     PROTOCOL LAYER      |
+                          |                         |
+                          | - Message framing       |
+                          | - Request/response      |
+                          | - Communication patterns|
+                          |                         |
+                          +------------+------------+
+                                       |
+                                       |
+                                       v
+                         +---------------------------+
+                         |      TRANSPORT LAYER      |
+                         |---------------------------|
+                         |                           |
+          +--------------|      1. Stdio             |---------------+
+          |              |      2. HTTP with SSE     |               |
+          |              |                           |               |
+          |              +---------------------------+               |
+          |                                                          |
+          v                                                          v
++------------------+                                      +------------------+
+|                  |                                      |                  |
+|  LOCAL PROCESS   |                                      |  REMOTE SERVICE  |
+|                  |                                      |                  |
++------------------+                                      +------------------+
+
+                        MESSAGE TYPES
+                        ============
++------------------------------------------------------------------+
+|                                                                  |
+|  1. REQUESTS - Expect response (method + params)                 |
+|  2. RESULTS - Successful responses to requests                   |
+|  3. ERRORS - Failed request responses (code + message + data)    |
+|  4. NOTIFICATIONS - One-way messages (no response expected)      |
+|                                                                  |
++------------------------------------------------------------------+
+
+                        CONNECTION LIFECYCLE
+                        ===================
++------------------------------------------------------------------+
+|                                                                  |
+|  1. INITIALIZATION                                               |
+|     - Client sends initialize request                            |
+|     - Server responds with capabilities                          |
+|     - Client sends initialized notification                      |
+|                                                                  |
+|  2. MESSAGE EXCHANGE                                             |
+|     - Request-Response patterns                                  |
+|     - One-way notifications                                      |
+|                                                                  |
+|  3. TERMINATION                                                  |
+|     - Clean shutdown (close)                                     |
+|     - Transport disconnection                                    |
+|     - Error conditions                                           |
+|                                                                  |
++------------------------------------------------------------------+
+
+                        KEY CONSIDERATIONS
+                        =================
++------------------------------------------------------------------+
+|                                                                  |
+|  ERROR HANDLING               |  SECURITY                        |
+|  - Standard error codes       |  - Transport security (TLS)      |
+|  - Custom error codes         |  - Message validation            |
+|  - Error propagation          |  - Resource protection           |
+|                               |  - Proper error handling         |
+|                               |                                  |
+|  BEST PRACTICES              |  DEBUGGING & MONITORING           |
+|  - Transport selection       |  - Logging                        |
+|  - Message handling          |  - Diagnostics                    |
+|  - Progress reporting        |  - Testing                        |
+|  - Error management          |  - Performance monitoring         |
+|                               |                                  |
++------------------------------------------------------------------+
+```
