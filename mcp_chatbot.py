@@ -3,6 +3,7 @@ from anthropic import Anthropic
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 from contextlib import AsyncExitStack
+import ollama
 import json
 import asyncio
 import nest_asyncio
@@ -10,6 +11,12 @@ import nest_asyncio
 nest_asyncio.apply()
 
 load_dotenv()
+
+SYSTEM_PROMPT = """
+You are an AI assistant for Tool Calling.
+
+Before you help a user, you need to work with tools to interact with Our Database
+        """
 
 class MCP_ChatBot:
     def __init__(self):
@@ -43,7 +50,14 @@ class MCP_ChatBot:
                     self.available_tools.append({
                         "name": tool.name,
                         "description": tool.description,
-                        "input_schema": tool.inputSchema
+                        "input_schema": tool.inputSchema,
+                        # local tools interface
+                        'type': 'function',
+                        'function': {
+                            "name": tool.name,
+                            "description": tool.description,
+                            'parameters': tool.inputSchema
+                        },
                     })
             
                 # List available prompts
@@ -124,6 +138,75 @@ class MCP_ChatBot:
             # Exit loop if no tool was used
             if not has_tool_use:
                 break
+    
+    async def process_query_local(self, query):
+        messages = [{'role': 'user', 'content': query}]
+
+        # print("------------available_tools - START-----------")
+        # print(self.available_tools)
+        # print("-------------available_tools - END------------")
+
+        while True:
+            response = ollama.chat(
+                model = 'ai-assistant-tool-calling',
+                messages = messages,
+                tools = self.available_tools,
+                # tools=[],
+                stream = False
+            )
+            # If using requests.post, do: response = response.json()
+
+            msg = response.get("message", {})
+            tool_calls = msg.get("tool_calls", [])
+            content = msg.get("content", "")
+
+            # print("------------response - START-----------")
+            # print(response.message)
+            # print("-------------response - END------------")
+
+            if content:
+                print(content)
+
+            if tool_calls:
+                for tool_call in tool_calls:
+                    fn = tool_call.get("function", {})
+                    tool_name = fn.get("name")
+                    arguments = fn.get("arguments", {})
+                    session = self.sessions.get(tool_name)
+                    if not session:
+                        print(f"Tool '{tool_name}' not found.")
+                        continue
+
+                    # print("------------arguments - START-----------")
+                    # print(arguments)
+                    # print("-------------arguments - END------------")
+                    # print("------------tool_name - START-----------")
+                    # print(tool_name)
+                    # print("-------------tool_name - END------------")
+                    # print("------------call_tool - START-----------")
+                    result = await session.call_tool(tool_name, arguments=arguments)
+                    # print("-------------call_tool - END------------")
+                    # print("------------result - START-----------")
+                    # print(result.content[0].text)
+                    # print("-------------result - END------------")
+                    # # Add tool result to messages for next round
+                    # messages.append({
+                    #     "role": "user",
+                    #     "content": [
+                    #         {
+                    #             "type": "tool_result",
+                    #             "tool_use_id": tool_call.get("id", tool_name),
+                    #             "content": result.content[0].text
+                    #         }
+                    #     ]
+                    # })
+                    # print("------------messages - START-----------")
+                    # print(messages)
+                    # print("-------------messages - END------------")
+
+                    # print("------------messages - START-----------")
+                    print(result.content[0].text)
+            break
 
     async def get_resource(self, resource_uri):
         session = self.sessions.get(resource_uri)
@@ -302,7 +385,7 @@ Regular queries will be processed by Claude with access to all available tools.
                         print("Use /help to see available commands.")
                     continue
                 
-                await self.process_query(query)
+                await self.process_query_local(query)
                     
             except Exception as e:
                 print(f"\nError: {str(e)}")
